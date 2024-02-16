@@ -1,7 +1,5 @@
-import { FewShotPromptTemplate } from "langchain/prompts.js";
-import { GenerativeAIService } from "./model/index.js";
-import { fewShotPrompt } from "./prompt/index.js";
-import { ollama } from "./model/ollama.js";
+
+import { runner } from "./agent";
 
 // index.ts
 
@@ -17,12 +15,6 @@ const userArgument: string = process.argv[2];
 // Your logic using the received argument
 console.log(`You provided the argument: ${userArgument}`);
 
-const service = new GenerativeAIService(ollama);
-const formattedPrompt = await fewShotPrompt.format({ commandInput: userArgument })
-
-const result = await service.generate(
-    // 
-    formattedPrompt
-  );
+const result = await runner.generate(userArgument)
   
-  console.log(result);
+console.log(result);
