@@ -1,5 +1,5 @@
 import { Ollama } from "@langchain/community/llms/ollama";
-import { baseUrl, model } from "../constant";
+import { baseUrl, model } from "../constant/index.js";
 
 export const ollama = new Ollama({
     baseUrl: baseUrl, // Default value

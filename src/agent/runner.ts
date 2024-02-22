@@ -1,6 +1,6 @@
-import { getOllamaStream } from "../llm";
-import { getRunnerPrompt } from "../prompt";
-import { GenerativeTextInterface } from "../types";
+import { getOllamaStream } from "../llm/index.js";
+import { getRunnerPrompt } from "../prompt/index.js";
+import { GenerativeTextInterface } from "../types/index.js";
 
 
 

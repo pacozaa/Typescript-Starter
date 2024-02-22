@@ -1,5 +1,5 @@
 
-import { runner } from "./agent";
+import { runner, planner } from "./agent/index.js";
 
 // index.ts
 
@@ -15,6 +15,10 @@ const userArgument: string = process.argv[2];
 // Your logic using the received argument
 console.log(`You provided the argument: ${userArgument}`);
 
-const result = await runner.generate(userArgument)
+const runnerResult = await runner.generate(userArgument)
+const plannerResult = await planner.generate(userArgument)
   
-console.log(result);
+console.log({
+  plannerResult,
+  runnerResult
+});
