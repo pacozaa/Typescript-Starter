@@ -1,12 +1,12 @@
 {
-  "name": "applescript-automator",
+  "name": "typescript-project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "automate": "npx tsc && node --experimental-specifier-resolution=node dist/index"
+    "index": "npx tsc && node dist/index"
   },
   "keywords": [],
   "author": "",
